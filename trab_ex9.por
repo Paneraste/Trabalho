@@ -5,6 +5,7 @@ programa
     funcao inicio()
     {
         real a, b, c, resultado, x1, x2, delta, B2
+	escreva("Resolva equações do 2º grau!\n")
         faca{
         escreva("\nEscreva o valor de (a): ")
         leia (a)
