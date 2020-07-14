@@ -72,7 +72,7 @@ programa
 		}
 		senao
 		{
-			escreva("Digite o valor a ser somado de," ,acumulado,": ")
+			escreva("Digite o valor a ser somado a " ,acumulado,": ")
 			leia(numero2)
 			acumulado += numero2
 			escreva("O valor da soma é: ", acumulado)
@@ -94,7 +94,7 @@ programa
 		}
 		senao
 		{
-			escreva("Digite o valor a ser subtraido de, " ,acumulado,": ")
+			escreva("Digite o valor a ser subtraido a " ,acumulado,": ")
 			leia(numero2)
 			acumulado -= numero2
 			escreva("O valor da subtração é: ", acumulado)
@@ -116,7 +116,7 @@ programa
 		}
 		senao
 		{
-			escreva("Digite o valor a ser multiplicado de, ",acumulado,": ")
+			escreva("Digite o valor a ser multiplicado a ",acumulado,": ")
 			leia(numero2)
 			acumulado *= numero2
 			escreva("O valor da mutiplicação é: ", acumulado)
@@ -148,7 +148,7 @@ programa
 		{
 			faca
 			{
-			escreva("Digite o valor a ser divido de, ",acumulado,": ")
+			escreva("Digite o valor a ser o divisor de ",acumulado,": ")
 			leia(numero2)
 			se(numero2 == 0)
 			{
@@ -167,8 +167,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1026; 
- * @DOBRAMENTO-CODIGO = [59, 81, 103, 125];
+ * @POSICAO-CURSOR = 3007; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
