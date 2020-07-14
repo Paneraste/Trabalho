@@ -4,10 +4,10 @@ programa
 	funcao inicio()
 	{
 		inteiro n1, n2, soma = 0, i
-		
-		escreva("Digite um valor: ")
+		escreva("Escolha dois números para saber a soma dos números pares entre eles.\n")
+		escreva("Digite o primeiro número: ")
 		leia(n1)
-		escreva("Digite um outro valor: ")
+		escreva("Digite o segundo número: ")
 		leia(n2)
 
 		se(n1 < n2){
@@ -33,7 +33,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 0; 
+ * @POSICAO-CURSOR = 144; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

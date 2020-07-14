@@ -6,7 +6,7 @@ programa
         inteiro cont1=1, n, divisores, cont2, primo =0
 	   inteiro quant,finalizar =0
 	   logico primeiro = verdadeiro
-	   escreva("Digite a quantidade de numeros primos que deseja imprimir ")
+	   escreva("Digite a quantidade de numeros primos que deseja imprimir: ")
 	   leia(quant)
  		
 	  
@@ -39,7 +39,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 747; 
+ * @POSICAO-CURSOR = 233; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
