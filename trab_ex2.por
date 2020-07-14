@@ -1,101 +1,174 @@
 programa
 {
-	funcao real somar(real val1, real val2, inteiro repetir){
-		real guardado
-		se(repetir!=2){
-			escreva("Digite o primeiro valor: ")
-			leia(val1)
-		}
-		escreva("Digite o segundo valor: ")
-		leia(val2)
-		guardado = val1 + val2
-		retorne  guardado
+	real numero1, numero2, acumulado = 0.0
+	inteiro operador
+	caracter continua
+	funcao inicio()
+	{
+	faca
+	{
+	escreva ("1- Soma \n",
+	"2 - Subtração \n",
+	"3 - Multiplicação \n",
+	"4 - Divisão \n",
+	"5 - Limpar \n",
+	"6 - Sair \n",
+	"Digite qual operação deseja efetuar: \n")
+	leia(operador)
+	se(operador == 1)
+	{
+		acumulado = soma(acumulado)
+		escreva("\n Gostaria de continuar com a conta (S/N)? ")
+		leia(continua)
+
 	}
-	funcao real subtrair(real val1, real val2, inteiro repetir){
-		real guardado
-		se(repetir!=2){
-			escreva("Digite o primeiro valor: ")
-			leia(val1)
-		}
-		escreva("Digite o segundo valor: ")
-		leia(val2)
-		guardado = val1 - val2
-		retorne  guardado
+	senao se(operador == 2)
+	{
+		acumulado = sub(acumulado)
+		escreva("\n Gostaria de continuar com a conta (S/N)? ")
+		leia(continua)
 	}
-	funcao real multiplicar(real val1, real val2, inteiro repetir){ 
-		real guardado
-		se(repetir!=2){
-			escreva("Digite o primeiro valor: ")
-			leia(val1)
-		}
-		escreva("Digite o segundo valor: ")
-		leia(val2) 
-		guardado = val1 * val2
-		retorne  guardado
-		}
-		
-	funcao real dividir(real val1, real val2, inteiro repetir){
-		real guardado
-		se(repetir!=2){
-			escreva("Digite o primeiro valor: ")
-			leia(val1)
-		}
-		faca{
-		
-		escreva("Nao e possivel dividir por numeros negativos ou por 0\n")	
-		escreva("Digite o segundo valor: ")
-		leia(val2)
-			
-			}enquanto(val2 <= 0)
-		guardado = val1 / val2
-		retorne  guardado
+	senao se(operador == 3)
+	{
+		acumulado = mult(acumulado)
+		escreva("\n Gostaria de continuar com a conta (S/N)? ")
+		leia(continua)
 	}
-	
-	funcao inicio(){
-		real val1 = 1.0,val2 = 1.0, guardado=0.0
-		inteiro repetir = 1,resp
-			
-		enquanto(repetir == 1 ou repetir ==2){	
-			se (repetir==2){
-				val1 = guardado	
-			}
-			escreva("\nDigite: \n 1-Somar \n 2-Subtrair \n 3-Multiplicar \n 4-Dividir \n R: ")
-			leia(resp)
-	
-			se(resp == 1){
-				guardado = somar(val1,val2,repetir))
-				escreva(guardado)
-			}
-			se(resp == 2){
-				guardado = subtrair(val1,val2,repetir))
-				escreva(guardado)
-			}
-			se(resp == 3){
-				guardado = multiplicar(val1,val2,repetir))
-				escreva(guardado)
-			}
-			se(resp == 4){
-				guardado = dividir(val1,val2,repetir))
-				escreva(guardado)
-			}
-			faca{
-				escreva("\n\nDeseja calcular mais vezes?\n1)Sim,com valor diferente \n2)Sim, com o mesmo valor \n3)Nao \nR: ")
-				leia(repetir)
-				se(repetir ==1 ou repetir==3){
-					limpa()
-				}
-			}enquanto(repetir != 1 e repetir !=2 e repetir !=3)
+	senao se(operador == 4)
+	{
+		acumulado = div(acumulado)
+		escreva("\n Gostaria de continuar com a conta (S/N)? ")
+		leia(continua)
+	}
+	senao se(operador == 5)
+	{
+		limpa()
+		acumulado = 0
+	}senao se(operador == 6)
+	{
+		escreva("Obrigado, Tchau!")
+		continua = 'N'
+	}
+	senao
+	{
+		limpa()
+		escreva("Opção invalida \n")
+	}
+	}enquanto(continua != 'N')
+	}
+
+	funcao real soma (real acumulado)
+	{
+		se(acumulado == 0)
+		{
+			escreva ("Digite o primeiro número: ")
+			leia(numero1)
+			escreva ("Digite o segundo número: ")
+			leia(numero2)
+			acumulado = numero1+numero2
+			escreva("O valor da soma é: ", acumulado)
+			retorne acumulado
+
 		}
-		escreva("\nACABOU O PROGRAMA")	
+		senao
+		{
+			escreva("Digite o valor a ser somado de," ,acumulado,": ")
+			leia(numero2)
+			acumulado += numero2
+			escreva("O valor da soma é: ", acumulado)
+			retorne acumulado
+		}
+	}
+	funcao real sub(real acumulado)
+	{
+		se(acumulado == 0)
+		{
+			escreva ("Digite o primeiro número: ")
+			leia(numero1)
+			escreva ("Digite o segundo número: ")
+			leia(numero2)
+			acumulado = numero1-numero2
+			escreva("O valor da subtração é: ", acumulado)
+			retorne acumulado
+
+		}
+		senao
+		{
+			escreva("Digite o valor a ser subtraido de, " ,acumulado,": ")
+			leia(numero2)
+			acumulado -= numero2
+			escreva("O valor da subtração é: ", acumulado)
+			retorne acumulado
+		}
+	}
+	funcao real mult(real acumulado)
+	{
+		se(acumulado == 0)
+		{
+			escreva ("Digite o primeiro número: ")
+			leia(numero1)
+			escreva ("Digite o segundo número: ")
+			leia(numero2)
+			acumulado = numero1*numero2
+			escreva("O valor da multiplicação é: ", acumulado)
+			retorne acumulado
+
+		}
+		senao
+		{
+			escreva("Digite o valor a ser multiplicado de, ",acumulado,": ")
+			leia(numero2)
+			acumulado *= numero2
+			escreva("O valor da mutiplicação é: ", acumulado)
+			retorne acumulado
+		}
+	}
+	funcao real div(real acumulado)
+	{
+		se(acumulado == 0)
+		{
+			escreva ("Digite o primeiro número: ")
+			leia(numero1)
+			faca
+			{
+			escreva ("Digite o segundo número: ")
+			leia(numero2)
+			se(numero2 == 0)
+			{
+				escreva ("Não é possivel dividir por zero, escolha outro valor: ")
+				leia(numero2)
+			}
+			}enquanto(numero2 == 0)
+			acumulado = numero1/numero2
+			escreva("O valor da divisão é: ", acumulado)
+			retorne acumulado
+
+		}
+		senao
+		{
+			faca
+			{
+			escreva("Digite o valor a ser divido de, ",acumulado,": ")
+			leia(numero2)
+			se(numero2 == 0)
+			{
+				escreva ("Não é possivel dividir por zero, escolha outro valor: ")
+				leia(numero2)
+			}
+			}enquanto(numero2 == 0)
+			acumulado /= numero2
+			escreva("O valor da divisão é: ", acumulado)
+			retorne acumulado
+		}
 	}
 }
-
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1512; 
+ * @POSICAO-CURSOR = 1026; 
+ * @DOBRAMENTO-CODIGO = [59, 81, 103, 125];
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
