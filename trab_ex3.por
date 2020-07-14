@@ -33,6 +33,8 @@ programa
 			}
 		}
 
+		limpa()
+		escreva("RESULTADO FINAL:\n")
 		para(cont = 0;cont<10;cont++){
 				pontilhado()
 				escreva(cont +1,")O aluno: ",nome[cont]," tirou ",val1[cont]," na P1, ",
@@ -46,7 +48,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 253; 
+ * @POSICAO-CURSOR = 854; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
