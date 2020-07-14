@@ -18,15 +18,20 @@ programa
 				limpa()
 				escreva("Quantos elementos gostaria de ver: ")
 				leia(n)
+				se(n < 0){
+					escreva("Número inválido!")
+				}
 				para(inteiro i = 1; i <= n; i++){
 					escreva(fibonacci(i), " ")
 				}
 				escreva("\n\n")
 			}
 			se(opcao == 2){
-				limpa()
-				escreva("Gostaria de ver o fatorial de qual número: ")
-				leia(n)
+				faca{
+					limpa()
+					escreva("Gostaria de ver o fatorial de qual número: ")
+					leia(n)
+				}enquanto(n < 0)
 				escreva("O fatorial do número ", n, " é ", fatorial(n), "\n\n")
 			}
 			se(opcao == 3){
@@ -64,7 +69,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 210; 
+ * @POSICAO-CURSOR = 454; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
