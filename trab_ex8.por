@@ -6,8 +6,9 @@ programa
 		inteiro num[10],cont,cont2,numeracao = 0,aux
 	     inteiro resp
 	     logico primeiro = verdadeiro
+	     escreva("Escolha 10 números e em seguida escolha a ordem a ser impressa.\n")
 		para(cont = 0;cont<10;cont++){
-			escreva("Digite ", numeracao +1, "° numero: ")
+			escreva("Digite o ", numeracao +1, "° numero: ")
 			leia(num[cont])
 			numeracao++
 		}
@@ -61,7 +62,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 212; 
+ * @POSICAO-CURSOR = 271; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
